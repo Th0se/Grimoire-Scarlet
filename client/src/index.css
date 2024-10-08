@@ -3,3 +3,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font declarations */
+
+@font-face {
+    font-family: 'crimson-pro';
+    src: url('Crimson_Pro/CrimsonPro-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'open-sans';
+    src: url('Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora/Lora-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto-Sans';
+    src: url('Noto_Sans/NotoSans-Regular.ttf') format('truetype');
+}
+
+.entries {
+    @apply col-span-2 md:col-span-4 lg:col-span-5;
+    @apply grid;
+    @apply grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-8;
+    @apply md:grid-rows-4 lg:grid-rows-5 xl:grid-rows-5 2xl:grid-rows-8;
+    @apply h-screen p-4 gap-4 overflow-y-scroll;
+}
+
+.text-title {
+    font-family: 'Lora';
+}
+
+.text-time {
+    font-family: 'open-sans';
+}
+
+.text-body {
+    font-family: 'Lora';
+}
+
+.text-UI {
+    font-family: 'Raleway';
+}
+
+.text-footer {
+    font-family: 'open-Sans';
+}

@@ -5,6 +5,7 @@ import Editor from '../shared/Editor';
 import SaveItem from '../shared/Types';
 import { DateTime } from 'luxon';
 import Sidebar from '../shared/Sidebar';
+import Footer from '../shared/Footer';
 
 const Write: React.FunctionComponent = () => {
     const [content, setContent] = useState<string>('<p>Placeholder entry.</p>');
@@ -47,18 +48,19 @@ const Write: React.FunctionComponent = () => {
                 JSON.stringify(Array.from(save.entries()))
             );
         }
+        alert('Entry saved');
     };
 
     return (
         <div data-theme='coffee'>
-            <main className='grid grid-cols-6'>
+            <main className='grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6'>
                 <Sidebar />
-                <div className='col-span-5 flex h-screen flex-col p-4 gap-4'>
+                <div className='col-span-2 md:col-span-4 lg:col-span-5 flex h-screen flex-col p-4 gap-4'>
                     <form>
                         <label className='form-control'>
                             <div className='label'>
                                 <span className='label-text text-info'>
-                                    Enter title here
+                                    Entry title
                                 </span>
                                 <span className='label-text-alt text-info'>
                                     Title is case sensitive
@@ -85,12 +87,13 @@ const Write: React.FunctionComponent = () => {
                     </div>
                     <button
                         onClick={logger}
-                        className='btn btn-primary'
+                        className='btn btn-primary text-UI'
                     >
                         Log
                     </button>
                 </div>
             </main>
+            <Footer />
         </div>
     );
 };

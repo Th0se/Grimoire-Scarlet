@@ -55,11 +55,15 @@ const UploadButton: React.FunctionComponent = () => {
     };
 
     return (
-        <div className='grid grid-cols-1 gap-1'>
-            <input
-                type='file'
-                onChange={handleInput}
-            />
+        <div className='grid grid-cols-1 gap-2'>
+            <label>
+                <p className='text-center'>Select save file for upload</p>
+                <input
+                    type='file'
+                    onChange={handleInput}
+                />
+            </label>
+
             <button
                 onClick={handleUpload}
                 className='btn btn-secondary btn-outline'
@@ -96,7 +100,7 @@ const Sidebar: React.FunctionComponent = () => {
     return (
         <div
             id='sidebar'
-            className='grid grid-rows-3 bg-neutral h-screen p-4'
+            className='grid grid-rows-3 bg-neutral h-screen sm:p-0 md:p-4 text-UI'
         >
             <div className='row-start-1 grid grid-rows-2 p-2'>
                 <WriteButton />
