@@ -61,6 +61,7 @@ const UploadButton: React.FunctionComponent = () => {
                 <input
                     type='file'
                     onChange={handleInput}
+                    className='file-input file-input-bordered file-input-secondary w-full'
                 />
             </label>
 
@@ -100,7 +101,7 @@ const Sidebar: React.FunctionComponent = () => {
     return (
         <div
             id='sidebar'
-            className='grid grid-rows-3 bg-neutral h-screen sm:p-0 md:p-4 text-UI'
+            className='grid grid-rows-3 bg-neutral h-full sm:p-0 md:p-4 text-UI'
         >
             <div className='row-start-1 grid grid-rows-2 p-2'>
                 <WriteButton />
