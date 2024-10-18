@@ -1,14 +1,14 @@
 {
     "name": "client",
     "private": true,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "start": "vite preview"
+        "start": "serve -s dist"
     },
     "dependencies": {
         "luxon": "^3.5.0",
@@ -16,7 +16,8 @@
         "react-dom": "^18.3.1",
         "react-quilljs": "^2.0.4",
         "react-router": "^6.26.2",
-        "react-router-dom": "^6.26.2"
+        "react-router-dom": "^6.26.2",
+        "serve": "^14.2.4"
     },
     "devDependencies": {
         "@eslint/js": "^9.9.0",
